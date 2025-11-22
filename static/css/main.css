@@ -12,53 +12,131 @@ body {
 
 /* HERO */
 
-.hero {
-  height: 100vh;
-  background: linear-gradient(135deg, #0f172a, #0b0f1f);
+.hero-elite {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #1c7ed6 0%,
+    #42a5f5 40%,
+    #0d47a1 100%
+  );
+  background-size: 400% 400%;
+  animation: slowShift 10s ease infinite;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 40px;
-  color: white;
+  overflow: hidden;
+  padding: 0 20px;
 }
 
-.hero h1 {
-  font-size: 4rem;
-  font-weight: 900;
-  margin-bottom: 20px;
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(0,140,255,0.12), transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(0,80,160,0.18), transparent 50%);
+  z-index: 1;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  opacity: 0.85;
-  max-width: 800px;
-  margin: auto;
+ .hero-content {
+  position: relative;
+  z-index: 4;
+  max-width: 900px;
+  backdrop-filter: blur(6px);
+  animation: softPulse 6s ease-in-out infinite;
+}
+
+
+.hero-elite h1 {
+  font-size: 4.2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 1.2rem;
+  color: #ffffff;
+}
+
+.hero-elite p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #d4e4f5;
+  margin-bottom: 3rem;
 }
 
 .hero-buttons {
-  margin-top: 40px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 1.2rem;
+  flex-wrap: wrap;
 }
 
-.btn-outline,
-.btn-solid {
-  padding: 14px 28px;
-  border-radius: 50px;
+.btn {
+  padding: 0.9rem 2.6rem;
+  border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
+  transition: 0.25s ease;
 }
 
-.btn-outline {
-  border: 2px solid white;
-  color: white;
+.btn.outline {
+  border: 1.8px solid #c7e6ff;
+  color: #c7e6ff;
+  background: transparent;
 }
 
-.btn-solid {
-  background: white;
-  color: black;
+.btn.outline:hover {
+  background: #c7e6ff;
+  color: #071324;
+}
+
+.btn.solid {
+  background: #ffffff;
+  color: #071324;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+}
+
+.btn.solid:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.5);
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s ease;
+}
+
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* GLOW ORBS */
+.hero-glow {
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  border-radius: 50%;
+  filter: blur(180px);
+  opacity: 0.75;
+  z-index: 2;
+}
+
+.hero-glow.left {
+  background: #82c8ff;
+  top: -180px;
+  left: -160px;
+  animation: floatUp 8s ease-in-out infinite;
+}
+
+.hero-glow.right {
+  background: #a8d9ff;
+  bottom: -200px;
+  right: -150px;
+  animation: floatDown 10s ease-in-out infinite;
 }
 
 .scroll-indicator {
@@ -241,11 +319,14 @@ body {
   align-items: center;
   justify-content: center;
   background:
-    radial-gradient(circle at top right, #0f2d4d 0%, transparent 40%),
-    radial-gradient(circle at bottom left, #021224 0%, transparent 45%),
-    linear-gradient(180deg, #050b18 0%, #071632 100%);
+    radial-gradient(circle at top right, #64b5f6 0%, transparent 40%),
+    radial-gradient(circle at bottom left, #42a5f5 0%, transparent 45%),
+    linear-gradient(180deg, #1565c0 0%, #1e88e5 100%);
+  background-size: 300% 300%;
+  animation: slowShift 20s ease infinite;
   text-align: center;
 }
+
 
 .join-content {
   max-width: 900px;
@@ -384,3 +465,28 @@ footer {
     font-size: 2.6rem;
   }
 }
+
+@keyframes slowShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-40px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes floatDown {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(40px); }
+  100% { transform: translateY(0px); }
+}
+
+ @keyframes softPulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.015); }
+  100% { transform: scale(1); }
+}
+

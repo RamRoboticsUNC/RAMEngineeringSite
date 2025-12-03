@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>RamEngineering — UNC</title>
+    <title>Ram Engineering @UNC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="{{ url_for('static', path='css/main.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', path='images/RE_png.png') }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 </head>
 
@@ -19,15 +20,21 @@
     <div class="hero-overlay"></div>
 
     <div class="hero-content fade-in">
-        <h1>RamEngineering</h1>
+        <img
+            src="{{ url_for('static', path='images/RE_png.png') }}"
+            alt="Ram Engineering crest"
+            class="hero-logo"
+        >
+        <h1>RAM Engineering</h1>
         <p>
-            The mother collective of UNC's most ambitious and premier engineering groups.<br>
-            Where aerospace, robotics, and microtechnology collide.
+            UNC's most ambitious engineering group<br>
+            where aerospace, robotics, and microtechnology unite.
         </p>
 
         <div class="hero-buttons">
             <a href="#vision" class="btn outline">Our Vision</a>
             <a href="#clubs" class="btn solid">Explore Divisions</a>
+            <a href="/apply" class="btn  apply-btn">Apply Now</a>
         </div>
 
         <!--<div class="scroll-indicator">Scroll ↓</div>-->
@@ -37,11 +44,11 @@
 <!-- ABOUT + IMAGES -->
 <section class="about">
     <div class="about-text slide-left">
-        <h2>Inside RamEngineering</h2>
+        <h2>Inside Ram Engineering</h2>
         <p>
-            RamEngineering is a club, but we emulate an ecosystem where students design, test,
+            Our goal is to emulate an ecosystem where students design, test,
             fail, rebuild, and launch real technology. From deep rocketry and advanced mechatronics to custom PCBs,
-            our members operate like a startup lab within UNC.
+            our members work in teams to accomplish real projects to gain hands-on experience.
         </p>
     </div>
 
@@ -61,9 +68,9 @@
     <div class="about-text slide-right">
         <h2>Built by Builders</h2>
         <p>
-            Students collaborate in engineering spaces across campus, learning hands-on skills
-            that go far beyond the classroom. You will prototype, solder, code, fabricate, and iterate
-            alongside some of the most driven students at Carolina.
+            Students collaborate in engineering spaces across campus learning hands-on skills
+            that go far beyond the classroom. At RE, you can prototype, solder, code, fabricate, and iterate
+            alongside some of the most driven peers at Carolina.
         </p>
     </div>
 </section>
@@ -72,15 +79,15 @@
 <section id="vision" class="vision fade-in">
     <h2>Our Vision</h2>
     <p>
-        RamEngineering unifies builders here at Carolina under a single identity. We design for
-        autonomy, intelligence, precision, and scale.
+        Ram Engineering unifies builders here at Carolina under a single identity. We hope that this club serves as a community for all like-minded engineers 
+        on campus that want to learn and collaborate on exiting projects!
     </p>
 
     <div class="pill-row">
         <div class="pill">Innovation</div>
-        <div class="pill">Execution</div>
+        <div class="pill">Collaboration</div>
         <div class="pill">Leadership</div>
-        <div class="pill">Autonomy</div>
+        <div class="pill">Creativity</div>
     </div>
 </section>
 
@@ -120,7 +127,7 @@
         <h2>Beyond Projects</h2>
 
         <p class="connect-intro">
-            RamEngineering is deeply connected to industry and research. We host guest speakers,
+            Ram Engineering is connected to industry and research. We plan to host guest speakers,
             company visits, alumni sessions, and technical workshops with leaders from aerospace,
             robotics, AI, and semiconductor organizations.
         </p>
@@ -154,14 +161,14 @@
 <!-- JOIN -->
 <section class="join-upgraded fade-in">
     <div class="join-content">
-        <h2>Join RamEngineering</h2>
-        <p>If you can imagine it, you can build it here.</p>
-        <a href="#" class="visit-btn join-btn">Join Now</a>
+        <h2>Join Ram Engineering</h2>
+        <p>If you can imagine it, you can build it here. We're always looking for motivated people like you!</p>
+        <a href="/apply" class="visit-btn join-btn">Join Now</a>
     </div>
 </section>
 
 <footer>
-    © RamEngineering — University of North Carolina
+    © Ram Engineering 2025 — University of North Carolina at Chapel Hill
 </footer>
 
 <script src="{{ url_for('static', path='js/main.js') }}"></script>

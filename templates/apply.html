@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apply - Ram Engineering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', path='css/main.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', path='images/RE_png.png') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<section class="hero-elite apply-hero">
+    <div class="hero-glow left"></div>
+    <div class="hero-glow right"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content fade-in">
+        <img
+            src="{{ url_for('static', path='images/RE_png.png') }}"
+            alt="Ram Engineering crest"
+            class="hero-logo"
+        >
+        <h1>Apply to <br> Ram Engineering!</h1>
+        <p>
+            We would love to have you!
+        </p>
+        <div class="hero-buttons">
+            <a href="/" class="btn outline">Back Home</a>
+            <a href="#divisions" class="btn solid">Explore Divisions</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- DIVISIONS -->
+<section id="divisions" class="clubs">
+    <h2>How to Apply</h2>
+    <p class="section-intro">
+        All of our branches have their own application! Click on each branch's website to apply!
+         
+    </p>
+    
+    <div class="club-grid">
+
+        <div class="club-card fade-in">
+            <img src="{{ url_for('static', path='images/csllogo.png') }}">
+            <h3>Carolina SkyLab</h3>
+            <p>Next-gen drones, aircraft, and rockets</p>
+            <a href="https://carolinaskylab.org/apply" target="_blank" class="visit-btn">Apply</a>
+        </div>
+
+        <div class="club-card fade-in">
+            <img src="{{ url_for('static', path='images/rrlogo.png') }}">
+            <h3>RamRobotics</h3>
+            <p>Advanced robotics and software</p>
+            <a href="https://ramrobotics.org/apply" target="_blank" class="visit-btn">Apply</a>
+        </div>
+
+        <div class="club-card fade-in">
+            <img src="{{ url_for('static', path='images/ccflogo.png') }}">
+            <h3>Carolina ChipFab</h3>
+            <p>Semiconductor design and fabrication</p>
+            <a href="https://www.carolinachipfab.org/#join" target="_blank" class="visit-btn">Apply</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="faq-section">
+    <div class="faq-intro">
+        <h2>FAQs</h2>
+        <!-- <p>Use the cards below to answer the most common questions. Add or duplicate items as needed.</p> -->
+    </div>
+
+    <div class="faq-grid">
+        <div class="faq-item">
+            <h3>What positions are you looking for?</h3>
+            <p>We are looking for team members for Project teams, Operations team, and the Finance team!</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can I apply to multiple divisions? Do I need to apply separately?</h3>
+            <p>Yes! You can apply to any division(s) you would like to, and they all have their own separate applications so you'll apply to them individually, even for operations & finance.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I apply to be an exec?</h3>
+            <p>Execs are chosen through internal voting available to all club members in the spring. (Execs are appointed for the academic year)</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do Operations & Finance teams work?</h3>
+            <p>Since the club is new, all branches are managed by Ram Engineering's Operation and Finance team and don't have their own (since RE is technically the official club). All of the branch applications have Operations/Finance roles available but they are all combined in the end!</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>I don't see my question here!</h3>
+            <p>Feel free to DM us on any of the socials or reach out to us at ramroboticsunc@gmail.com</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © Ram Engineering 2025 — University of North Carolina at Chapel Hill
+</footer>
+
+<script src="{{ url_for('static', path='js/main.js') }}"></script>
+</body>
+</html>
+
